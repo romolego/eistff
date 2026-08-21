@@ -37,6 +37,43 @@
       </div>
     </header>
 
+    <details class="usage-guide">
+      <summary>
+        <span>
+          <strong>Как пользоваться сервисом</strong>
+          <small>Установка расширения и два режима сравнения</small>
+        </span>
+        <span class="usage-guide-action" aria-hidden="true">Открыть</span>
+      </summary>
+      <div class="usage-guide-body">
+        <section>
+          <p class="usage-guide-label">Подготовка</p>
+          <h2>Расширение устанавливается один раз</h2>
+          <ol>
+            <li><a href="https://drive.google.com/drive/folders/17lTlqsUmHDQNYkvms2CezJZpLo-xk663" target="_blank" rel="noopener noreferrer">Скачайте расширение</a> и распакуйте архив, если он скачался в формате ZIP.</li>
+            <li>Введите в адресной строке Chrome <strong>chrome://extensions/</strong>, включите <strong>Режим разработчика</strong> и нажмите <strong>Загрузить распакованное расширение</strong>.</li>
+            <li>Выберите папку <strong>extension</strong>, в которой лежит файл <strong>manifest.json</strong>, затем обновите страницу сервиса.</li>
+          </ol>
+          <p class="usage-guide-note">После установки сервис будет находить расширение автоматически. Устанавливать его заново перед каждой проверкой не нужно.</p>
+        </section>
+
+        <section>
+          <p class="usage-guide-label">Два режима</p>
+          <div class="usage-modes">
+            <div>
+              <h3>Автоматически — с расширением</h3>
+              <p>Откройте «Проверить ЕИС», задайте период и нажмите «Проверить источник». Выберите старую и новую версии — сервис сам загрузит архивы и сравнит их.</p>
+            </div>
+            <div>
+              <h3>Вручную — без расширения</h3>
+              <p>Скачайте два ZIP-архива самостоятельно. В разделе «Сравнить пакеты A/B» загрузите предыдущий пакет в A, новый — в B, затем запустите сравнение.</p>
+            </div>
+          </div>
+          <p class="usage-guide-demo"><a href="https://drive.google.com/file/d/1nrbYzEHQW9RqUDIC7Xd6V4CIn64m-maE" target="_blank" rel="noopener noreferrer">Посмотреть короткую видеодемонстрацию</a><span>Утверждение в видео о невозможности встроить сервис в виджет больше не актуально.</span></p>
+        </section>
+      </div>
+    </details>
+
     <section class="source-row" aria-label="Источник публикаций">
       <label for="sourceUrl">Источник</label>
       <input id="sourceUrl" type="url" spellcheck="false" value="https://zakupki.gov.ru/epz/main/public/document/view.html?searchString=&sectionId=432&strictEqual=false">
