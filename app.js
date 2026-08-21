@@ -114,10 +114,13 @@
 
   function initDates() {
     const today = new Date();
-    const saved = localStorage.getItem("tff:lastSuccessfulCheck");
-    const fallback = new Date(today);
-    fallback.setDate(fallback.getDate() - 1);
-    elements.dateFrom.value = localIsoDate(saved ? new Date(saved) : fallback);
+    const monthAgo = new Date(today);
+    const dayOfMonth = monthAgo.getDate();
+    monthAgo.setDate(1);
+    monthAgo.setMonth(monthAgo.getMonth() - 1);
+    const lastDayOfPreviousMonth = new Date(monthAgo.getFullYear(), monthAgo.getMonth() + 1, 0).getDate();
+    monthAgo.setDate(Math.min(dayOfMonth, lastDayOfPreviousMonth));
+    elements.dateFrom.value = localIsoDate(monthAgo);
     elements.dateTo.value = localIsoDate(today);
   }
 
